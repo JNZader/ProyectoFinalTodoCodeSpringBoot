@@ -1,6 +1,9 @@
 package com.example.api.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 /**
@@ -15,13 +18,13 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class BaseDTO {
 
-   /**
-    * El identificador único de la entidad.
-    */
-   private Long id;
+    /**
+     * El identificador único de la entidad.
+     */
+    private Long id;
 
-   /**
-    * El estado de la entidad, que puede indicar si está activa o inactiva.
-    */
-   private Boolean estado;
+    /**
+     * El estado de la entidad, que puede indicar si está activa o inactiva.
+     */
+    private Boolean estado;
 }

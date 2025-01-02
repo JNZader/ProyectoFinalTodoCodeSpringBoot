@@ -12,18 +12,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor // Genera un constructor con todos los parámetros
 public class ErrorResponse {
 
-   /**
-    * Mensaje descriptivo del error.
-    */
-   private String mensaje;
+    /**
+     * Mensaje descriptivo del error.
+     */
+    private String mensaje;
 
-   /**
-    * Código de error asociado a la respuesta.
-    */
-   private int codigoError;
+    /**
+     * Código de error asociado a la respuesta.
+     */
+    private int codigoError;
 
-   /**
-    * Detalles adicionales sobre el error.
-    */
-   private String detalles;
+    /**
+     * Detalles adicionales sobre el error.
+     */
+    private String detalles;
 }

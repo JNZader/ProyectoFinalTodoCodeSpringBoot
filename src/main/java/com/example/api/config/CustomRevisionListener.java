@@ -9,15 +9,15 @@ import org.hibernate.envers.RevisionListener;
  */
 public class CustomRevisionListener implements RevisionListener {
 
-   /**
-    * Se llama cuando se crea una nueva revisión.
-    *
-    * @param revisionEntity la entidad de revisión que representa la nueva revisión.
-    *                      Se espera que sea una instancia de {@link Revision}.
-    */
-   @Override
-   public void newRevision(Object revisionEntity) {
-      final Revision revision = (Revision) revisionEntity;
-      // Aquí se puede agregar lógica adicional para manejar nuevas revisiones
-   }
+    /**
+     * Se llama cuando se crea una nueva revisión.
+     *
+     * @param revisionEntity la entidad de revisión que representa la nueva revisión.
+     *                       Se espera que sea una instancia de {@link Revision}.
+     */
+    @Override
+    public void newRevision(Object revisionEntity) {
+        final Revision revision = (Revision) revisionEntity;
+        // Aquí se puede agregar lógica adicional para manejar nuevas revisiones
+    }
 }

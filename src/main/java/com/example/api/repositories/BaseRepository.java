@@ -13,17 +13,17 @@ import java.io.Serializable;
  * entidades que extienden de la clase Base. Extiende de JpaRepository para
  * aprovechar las operaciones CRUD y la paginación.
  *
- * @param <E> el tipo de la entidad que extiende de Base
+ * @param <E>  el tipo de la entidad que extiende de Base
  * @param <ID> el tipo del identificador de la entidad
  */
 @NoRepositoryBean
 public interface BaseRepository<E extends Base, ID extends Serializable> extends JpaRepository<E, ID> {
 
-   /**
-    * Obtiene una página de entidades de tipo E.
-    *
-    * @param pageable objeto que contiene información de paginación
-    * @return una página de entidades de tipo E
-    */
-   Page<E> findAll(Pageable pageable); // no es necesario al extender de PagingAndSortingRepository
+    /**
+     * Obtiene una página de entidades de tipo E.
+     *
+     * @param pageable objeto que contiene información de paginación
+     * @return una página de entidades de tipo E
+     */
+    Page<E> findAll(Pageable pageable); // no es necesario al extender de PagingAndSortingRepository
 }

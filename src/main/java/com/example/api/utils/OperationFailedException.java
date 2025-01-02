@@ -7,13 +7,13 @@ package com.example.api.utils;
  */
 public class OperationFailedException extends RuntimeException {
 
-   /**
-    * Constructor que crea una nueva instancia de OperationFailedException.
-    *
-    * @param message Mensaje que describe el motivo de la excepción. Este mensaje
-    *                se pasará a la clase base RuntimeException.
-    */
-   public OperationFailedException(String message) {
-      super(message); // Llama al constructor de la clase base con el mensaje proporcionado.
-   }
+    /**
+     * Constructor que crea una nueva instancia de OperationFailedException.
+     *
+     * @param message Mensaje que describe el motivo de la excepción. Este mensaje
+     *                se pasará a la clase base RuntimeException.
+     */
+    public OperationFailedException(String message) {
+        super(message); // Llama al constructor de la clase base con el mensaje proporcionado.
+    }
 }

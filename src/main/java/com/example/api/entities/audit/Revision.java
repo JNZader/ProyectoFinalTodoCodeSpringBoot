@@ -21,26 +21,26 @@ import java.util.Date;
 @Data
 public class Revision implements Serializable {
 
-   private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-   /**
-    * El identificador único de la revisión. Se genera automáticamente
-    * utilizando una secuencia.
-    */
-   @Id
-   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "revision_seq")
-   @SequenceGenerator(
-         name = "revision_seq",
-         sequenceName = "rbac.seq_revision_id"
-   )
-   @RevisionNumber
-   private int id;
+    /**
+     * El identificador único de la revisión. Se genera automáticamente
+     * utilizando una secuencia.
+     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "revision_seq")
+    @SequenceGenerator(
+            name = "revision_seq",
+            sequenceName = "rbac.seq_revision_id"
+    )
+    @RevisionNumber
+    private int id;
 
-   /**
-    * La fecha y hora en que se realizó la revisión.
-    */
-   @Column(name = "REVISION_DATE")
-   @Temporal(TemporalType.TIMESTAMP)
-   @RevisionTimestamp
-   private Date date;
+    /**
+     * La fecha y hora en que se realizó la revisión.
+     */
+    @Column(name = "REVISION_DATE")
+    @Temporal(TemporalType.TIMESTAMP)
+    @RevisionTimestamp
+    private Date date;
 }

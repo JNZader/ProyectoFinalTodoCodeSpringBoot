@@ -1,7 +1,13 @@
 package com.example.api.config;
 
-import com.example.api.dto.*;
-import com.example.api.entities.*;
+import com.example.api.dto.ClienteDTO;
+import com.example.api.dto.ProductoDTO;
+import com.example.api.dto.ProductoVentaDTO;
+import com.example.api.dto.VentaDTO;
+import com.example.api.entities.Cliente;
+import com.example.api.entities.Producto;
+import com.example.api.entities.ProductoVenta;
+import com.example.api.entities.Venta;
 import com.example.api.mappers.GenericMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,12 +21,25 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MapperConfig {
 
-    /*
-    // Ejemplo de bean de mapeo para la entidad Autor y su DTO
+
     @Bean
-    public GenericMapper<Autor, AutorDTO> autorMapper() {
-        return new GenericMapper<>(Autor.class, AutorDTO.class);
+    public GenericMapper<Cliente, ClienteDTO> clienteMapper() {
+        return new GenericMapper<>(Cliente.class, ClienteDTO.class);
     }
-    */
+
+    @Bean
+    public GenericMapper<Producto, ProductoDTO> productoMapper() {
+        return new GenericMapper<>(Producto.class, ProductoDTO.class);
+    }
+
+    @Bean
+    public GenericMapper<Venta, VentaDTO> ventaMapper() {
+        return new GenericMapper<>(Venta.class, VentaDTO.class);
+    }
+
+    @Bean
+    public GenericMapper<ProductoVenta, ProductoVentaDTO> productoVentaMapper() {
+        return new GenericMapper<>(ProductoVenta.class, ProductoVentaDTO.class);
+    }
 
 }
